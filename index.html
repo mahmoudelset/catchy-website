@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>Catchy - The Space Cat Meme Coin</title>
+    <style>
+        body {
+            cursor: url('images/catchy-paw-cursor.png'), auto; /* Custom meme cursor image */
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+    <!-- Contract Address Section -->
+    <section class="contract-address">
+        <span>Contract Address: 0x123...ABC (Dummy)</span>
+        <button id="copyButton" onclick="copyAddress()">Copy Address</button>
+    </section>
+
     <!-- Navigation Menu -->
     <nav class="nav">
         <div class="menu-toggle">
@@ -34,29 +46,31 @@
         <img src="images/catchy-about.png" alt="Catchy the cat in a space helmet">
         <div class="content">
             <h2>Who is Catchy?</h2>
-            <p>Catchy is not your ordinary cat. Born in a small town, he always dreamt of reaching the stars. Despite being terrified of heights, Catchy never let his fears hold him back. With his fluffy fur and big curious eyes, he made his way to become the first meme cat astronaut.</p>
-            <p>Catchy is the ultimate combination of courage and fluffiness. He represents every dreamer who dares to face their fears. With his space suit on and paws ready, Catchy is determined to make it to the moon... and beyond!</p>
+            <p>Catchy is a brave, fluffy cat who dreams of the stars. Despite his fear of heights, he's ready to explore space and make history as the first meme cat astronaut!</p>
+            <p>Join Catchy on his journey as he takes giant leaps for fluff-kind!</p>
         </div>
     </section>
 
     <!-- Roadmap Section -->
-    <section id="roadmap" class="roadmap special-theme-roadmap">
+    <section id="roadmap" class="special-theme-roadmap">
         <h2>Roadmap to the Stars</h2>
-        <div class="phase">
-            <h3>Phase 1: Suit Up!</h3>
-            <p>Catchy gets his space suit ready. The community helps him with the coolest designs and patches.</p>
-        </div>
-        <div class="phase">
-            <h3>Phase 2: Rocket Launch</h3>
-            <p>With the support of his fans, Catchy finally takes off in a colorful rocket. Expect some spectacular meme content during launch day!</p>
-        </div>
-        <div class="phase">
-            <h3>Phase 3: To the Moon!</h3>
-            <p>Catchy reaches the moon and plants the meme flag. This is where the coin starts taking off, and the community grows bigger than ever.</p>
-        </div>
-        <div class="phase">
-            <h3>Phase 4: Beyond the Moon</h3>
-            <p>Catchy doesn’t stop at the moon. He’s ready to explore the whole galaxy. Join him on his adventure as we bring more utilities and surprises to the coin!</p>
+        <div class="phase-container">
+            <div class="phase-box">
+                <h3>Phase 1: Suit Up!</h3>
+                <p>Catchy gets his space suit ready. The community helps him with the coolest designs and patches.</p>
+            </div>
+            <div class="phase-box">
+                <h3>Phase 2: Rocket Launch</h3>
+                <p>With the support of his fans, Catchy finally takes off in a colorful rocket. Expect some spectacular meme content during launch day!</p>
+            </div>
+            <div class="phase-box">
+                <h3>Phase 3: To the Moon!</h3>
+                <p>Catchy reaches the moon and plants the meme flag. This is where the coin starts taking off, and the community grows bigger than ever.</p>
+            </div>
+            <div class="phase-box">
+                <h3>Phase 4: Beyond the Moon</h3>
+                <p>Catchy doesn’t stop at the moon. He’s ready to explore the whole galaxy. Join him on his adventure as we bring more utilities and surprises to the coin!</p>
+            </div>
         </div>
     </section>
 
@@ -78,11 +92,26 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer special-theme-footer">
+    <footer class="footer">
         <p>&copy; 2024 Catchy Meme Coin. All Rights Reserved.</p>
         <p>Created with love for all meme and crypto enthusiasts.</p>
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        function copyAddress() {
+            const address = '0x123...ABC'; // Dummy contract address
+            const copyButton = document.getElementById('copyButton');
+            navigator.clipboard.writeText(address).then(function() {
+                copyButton.textContent = 'Copied...';
+                setTimeout(function() {
+                    copyButton.textContent = 'Copy Address';
+                }, 3000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+    </div>
 </body>
 </html>

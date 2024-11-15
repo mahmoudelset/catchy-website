@@ -11,8 +11,8 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #fffae6, #ffe066);
-    color: #333;
+    background: linear-gradient(to bottom, #000428, #004e92); /* Dybblå gradient som matcher rummet */
+    color: #e0e4e9;
     line-height: 1.6;
     text-align: center;
     font-family: 'Fredoka One', cursive;
@@ -20,16 +20,53 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* Contract Address Section */
+.contract-address {
+    background: rgba(0, 25, 51, 0.9);
+    color: #00d4ff;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid #ffd700;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contract-address span {
+    user-select: all;
+}
+
+.contract-address button {
+    background-color: #00d4ff;
+    color: #000428;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contract-address button:hover {
+    background-color: #00aaff;
+}
+
 /* Navigation Menu */
 .nav {
-    background: linear-gradient(90deg, #ff6f61, #ffcc29);
+    background: rgba(0, 25, 51, 0.8); /* Halvgennemsigtig mørk blå */
     padding: 20px 0;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    border-bottom: 5px solid #ffd700;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
     animation: fadeInDown 1s ease-in-out;
 }
 
@@ -46,22 +83,22 @@ body {
 }
 
 .nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.4em;
     transition: color 0.4s ease;
 }
 
 .nav a:hover {
-    color: #ff6600;
-    text-shadow: 0px 0px 10px #ff6600;
+    color: #00d4ff;
+    text-shadow: 0px 0px 10px #00d4ff;
 }
 
 .menu-toggle {
     display: none;
     cursor: pointer;
     font-size: 2em;
-    color: #fff;
+    color: #ffffff;
     position: absolute;
     top: 20px;
     right: 25px;
@@ -71,7 +108,7 @@ body {
 .menu-toggle div {
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #ffffff;
     margin: 5px 0;
     transition: 0.3s;
 }
@@ -81,13 +118,13 @@ body {
         display: none !important;
         flex-direction: column;
         gap: 20px;
-        background: linear-gradient(180deg, #ff6f61, #ffcc29);
+        background: rgba(0, 25, 51, 0.95);
         padding: 30px;
         position: absolute;
         top: 70px;
         right: 0;
         width: 100%;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
     }
     .menu-toggle {
         display: block;
@@ -111,7 +148,7 @@ body {
     background: url('images/catchy-hero-background.png') no-repeat center center/cover;
     backdrop-filter: blur(5px);
     padding: 200px 20px;
-    color: #fff;
+    color: #ffffff;
     position: relative;
     overflow: hidden;
 }
@@ -123,8 +160,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 111, 97, 0.7);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 25, 51, 0.7);
     z-index: 1;
 }
 
@@ -133,8 +169,8 @@ body {
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
-    color: #ffcc29;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    color: #00d4ff;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
     animation: bounceIn 1.5s ease-in-out;
 }
 
@@ -145,8 +181,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #e0e4e9;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     animation: fadeInUp 1.5s ease-in-out;
 }
 
@@ -156,8 +192,8 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid #ffcc29;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border: 5px solid #00d4ff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     margin-top: 30px;
     animation: spinCircle 6s linear infinite;
 }
@@ -184,138 +220,221 @@ body {
     }
 }
 
+/* About Section - Updated Design */
+.about {
+    background: linear-gradient(to right, #003366, #001f3f);
+    padding: 100px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-top: 8px solid #00aaff;
+    border-bottom: 8px solid #00d4ff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about img {
+    max-width: 250px;
+    border-radius: 50%;
+    border: 5px solid #00d4ff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite alternate;
+}
+
+.about .content {
+    max-width: 600px;
+    text-align: center;
+    color: #e0e4e9;
+}
+
+.about h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.about p {
+    font-size: 1.4em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .about img {
+        max-width: 200px;
+    }
+    .about h2 {
+        font-size: 2.5em;
+    }
+    .about p {
+        font-size: 1.2em;
+    }
+}
+
 /* Roadmap Section - Special Theme */
 .special-theme-roadmap {
-    background-color: #ffefc2;
-    padding: 80px 20px;
-    color: #d43d3d;
-    text-align: left;
-    border-top: 8px solid #ff6f61;
-    border-bottom: 8px solid #ffcc29;
+    background: linear-gradient(to bottom, #001f3f, #005f99);
+    padding: 100px 40px;
+    color: #e0e4e9;
+    text-align: center;
+    border-top: 8px solid #00aaff;
+    border-bottom: 8px solid #00d4ff;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .special-theme-roadmap h2 {
     font-size: 3em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.special-theme-roadmap .phase {
-    margin-bottom: 30px;
-    padding: 15px;
-    background: #fff3e0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.special-theme-roadmap .phase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.special-theme-roadmap .phase-box {
+    position: relative;
+    padding: 40px;
+    background: #003366;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    color: #e0e4e9;
+}
+
+.special-theme-roadmap .phase-box::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #00d4ff;
+    left: -20px;
+    top: 0;
+    transform: rotate(20deg);
 }
 
 .special-theme-roadmap h3 {
-    font-size: 2em;
-    color: #ff6f61;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 2.2em;
+    color: #00d4ff;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 .special-theme-roadmap p {
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 1.8;
 }
 
 /* Buy Section - Special Theme */
 .special-theme-buy {
-    background: linear-gradient(to right, #4dabf7, #a3daff);
-    color: #fff;
-    padding: 80px 20px;
+    background: linear-gradient(to right, #002f4f, #005f99);
+    color: #ffffff;
+    padding: 100px 40px;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .special-theme-buy h2 {
     font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .special-theme-buy p {
     font-size: 1.5em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     max-width: 700px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto;
     line-height: 1.8;
 }
 
 .special-theme-buy img {
     max-width: 250px;
     border-radius: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     animation: pulse 2s infinite alternate;
 }
 
 /* Community Section - Special Theme */
 .special-theme-community {
-    background-color: #333;
-    color: #ffcc29;
-    padding: 90px 20px;
-    text-align: left;
-    border-top: 8px solid #ffd700;
-    border-bottom: 8px solid #ff6600;
+    background: linear-gradient(to bottom, #001f3f, #003366);
+    color: #00d4ff;
+    padding: 100px 40px;
+    text-align: center;
+    border-top: 8px solid #00aaff;
+    border-bottom: 8px solid #005f99;
     animation: fadeInUp 1.5s ease-in-out;
 }
 
 .special-theme-community h2 {
     font-size: 3em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+.special-theme-community p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
 .special-theme-community ul {
     list-style-type: none;
-    margin-top: 20px;
+    margin-top: 30px;
     line-height: 1.8;
     text-align: center;
 }
 
 .special-theme-community li {
     font-size: 1.5em;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .special-theme-community a {
-    color: #ffd700;
+    color: #00d4ff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .special-theme-community a:hover {
     text-decoration: underline;
-    color: #ff6600;
+    color: #00aaff;
 }
 
 /* Footer Section - Special Theme */
 .special-theme-footer {
-    background: linear-gradient(to right, #ff6f61, #ffcc29);
-    color: #fff;
-    padding: 40px 20px;
+    background: linear-gradient(to right, #001f3f, #005f99);
+    color: #e0e4e9;
+    padding: 60px 40px;
     text-align: center;
-    border-top: 5px solid #ffd700;
+    border-top: 5px solid #00d4ff;
     animation: fadeInUp 1.5s ease-in-out;
 }
 
 .special-theme-footer p {
     font-size: 1.2em;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .special-theme-footer a {
-    color: #fff;
+    color: #00d4ff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .special-theme-footer a:hover {
-    color: #ff6600;
+    color: #00aaff;
 }
 
 /* Keyframes for Animations */
